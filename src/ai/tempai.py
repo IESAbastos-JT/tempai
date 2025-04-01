@@ -29,7 +29,7 @@ def model_fit(train_data: list[ModelFitRequestPair]):
 def model_predict(celsius: float) -> float:
     global tempai_model
     if (tempai_model is None):
-        raise Exception('It is necessary to train the AI model firts')
+        raise Exception('Primero debes entrenar el modelo')
     
     return tempai_model.predict(np.array([celsius]))
     
